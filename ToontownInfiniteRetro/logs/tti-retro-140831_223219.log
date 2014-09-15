@@ -1,0 +1,42 @@
+ToontownStart: Polling for game2 to finish...
+ToontownStart: Game2 is finished.
+ToontownStart: Starting the game.
+ToontownStart: setting default font
+TTLocalizer: Running in language: english
+from toontown.toonbase.TTLocalizerEnglish import *
+OTPLocalizer: Running in language: english
+from otp.otpbase.OTPLocalizerEnglish import *
+ToontownStart: Loading default gui sounds
+ToontownStart: serverVersion:  tti-retro-dev
+Preloading avatars...
+Done preloading avatars.
+{401000001: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x1C25FEE0>}
+entering active SC menu
+local
+0
+Reading DNA file... phase_4/dna/storage.dna
+Reading DNA file... phase_3.5/dna/storage_interior.dna
+frame rate: 8.9 fps|0.042d|15 avs||392|401||0x8086|0x0106|1021.2MB|1013.9MB|3912.4MB|990|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+Reading DNA file... phase_8/dna/storage_DG.dna
+Reading DNA file... phase_8/dna/storage_DG_sz.dna
+Reading DNA file... phase_8/dna/daisys_garden_sz.dna
+fisherman origin:  render/loader_data/daisysGarden/fishing_pond_1/npc_fisherman_origin_0
+Reading DNA file... phase_5/dna/storage_town.dna
+Reading DNA file... phase_8/dna/storage_DG_town.dna
+Reading DNA file... phase_8/dna/daisys_garden_5300.dna
+Battle Event localtoon-battle-event-3
+Battle Event localtoon-battle-event-8
+Battle Event localtoon-battle-event-13
+frame rate: 36.6 fps|0.015d|5 avs||692|701||0x8086|0x0106|1037.2MB|1029.5MB|3912.4MB|1123|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+Reading DNA file... phase_5/dna/storage_town.dna
+Reading DNA file... phase_8/dna/storage_DG_town.dna
+Reading DNA file... phase_8/dna/daisys_garden_5300.dna
+ignoring InputState-forward

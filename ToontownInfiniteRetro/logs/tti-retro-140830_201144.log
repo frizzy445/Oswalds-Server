@@ -1,0 +1,171 @@
+ToontownStart: Polling for game2 to finish...
+ToontownStart: Game2 is finished.
+ToontownStart: Starting the game.
+ToontownStart: setting default font
+TTLocalizer: Running in language: english
+from toontown.toonbase.TTLocalizerEnglish import *
+OTPLocalizer: Running in language: english
+from otp.otpbase.OTPLocalizerEnglish import *
+ToontownStart: Loading default gui sounds
+ToontownStart: serverVersion:  tti-retro-dev
+Preloading avatars...
+Done preloading avatars.
+{401000001: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x1C2CB738>}
+entering active SC menu
+local
+1
+Reading DNA file... phase_4/dna/storage.dna
+Reading DNA file... phase_3.5/dna/storage_interior.dna
+Reading DNA file... phase_4/dna/storage_TT.dna
+Reading DNA file... phase_4/dna/storage_TT_sz.dna
+Reading DNA file... phase_4/dna/toontown_central_sz.dna
+Responding to non-available character!
+fisherman origin:  render/loader_data/toontownCentral/fishing_pond_1/npc_fisherman_origin_0
+Reading DNA file... phase_5/dna/storage_town.dna
+Reading DNA file... phase_5/dna/storage_TT_town.dna
+Reading DNA file... phase_5/dna/toontown_central_2200.dna
+DNALandmarkBuilding sb42:toon_landmark_hqTT_DNARoot did not find **/*suit_building_origin
+updating achievements page
+fisherman origin:  render/town_top_level/toontownCentral/2236/fishing_pond_1/npc_fisherman_origin_0
+entering active SC menu
+entering active SC menu
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+updating achievements page
+updating achievements page
+updating achievements page
+Battle Event localtoon-battle-event-10
+frame rate: 16.5 fps|0.052d|30 avs||355|365||0x8086|0x0106|1029.6MB|1041.9MB|3912.4MB|1021|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+frame rate: 3.7 fps|0.022d|1 avs||655|665||0x8086|0x0106|1081.8MB|1094.4MB|3912.4MB|1042|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+Battle Event localtoon-battle-event-17
+frame rate: 4.3 fps|0.071d|66 avs||955|965||0x8086|0x0106|1099.9MB|1112.6MB|3912.4MB|1050|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+0.0 7.4625005722 -0.20000000298 0.800000011921
+LPoint3f(-4.42825, 0.05, -2.4)
+Reading DNA file... phase_6/dna/storage_DD.dna
+Reading DNA file... phase_6/dna/storage_DD_sz.dna
+Reading DNA file... phase_6/dna/donalds_dock_sz.dna
+DNALandmarkBuilding sb10:toon_landmark_DD_pet_shop_DNARoot did not find **/*suit_building_origin
+fisherman origin:  render/loader_data/donaldsDock/fishing_pond_1/npc_fisherman_origin_0
+entering active SC menu
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+Reading DNA file... phase_4/dna/storage_TT.dna
+Reading DNA file... phase_4/dna/storage_TT_sz.dna
+Reading DNA file... phase_4/dna/toontown_central_sz.dna
+Responding to non-available character!
+fisherman origin:  render/loader_data/toontownCentral/fishing_pond_1/npc_fisherman_origin_0
+updating achievements page
+0.0 7.4625005722 -0.20000000298 0.800000011921
+LPoint3f(-4.42825, 0.05, -2.4)
+frame rate: 8.0 fps|0.007d|3 avs||1255|1265||0x8086|0x0106|1070.0MB|1114.4MB|3912.4MB|1125|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+updating achievements page
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+Traceback (most recent call last):
+  File "C:\Panda3D-1.9.0\direct\distributed\ConnectionRepository.py", line 613, in readerPollUntilEmpty
+    while self.readerPollOnce():
+  File "C:\Panda3D-1.9.0\direct\distributed\ConnectionRepository.py", line 620, in readerPollOnce
+    self.handleDatagram(self.private__di)
+  File "otp\distributed\OTPClientRepository.py", line 1873, in handleDatagram
+    self.handler(msgType, di)
+  File "otp\distributed\OTPClientRepository.py", line 1482, in handlePlayGame
+    self.handleGenerateWithRequiredOther(di)
+  File "otp\distributed\OTPClientRepository.py", line 1991, in handleGenerateWithRequiredOther
+    self.doGenerate(parentId, zoneId, classId, doId, di)
+  File "C:\Panda3D-1.9.0\direct\distributed\ClientRepositoryBase.py", line 162, in doGenerate
+    distObj = self.generateWithRequiredOtherFields(dclass, doId, di, parentId, zoneId)
+  File "C:\Panda3D-1.9.0\direct\distributed\ClientRepositoryBase.py", line 313, in generateWithRequiredOtherFields
+    distObj.updateRequiredOtherFields(dclass, di)
+  File "C:\Panda3D-1.9.0\direct\distributed\DistributedObject.py", line 354, in updateRequiredOtherFields
+    dclass.receiveUpdateOther(self, di)
+  File "otp\level\DistributedLevel.py", line 70, in setStartTimestamp
+    self.privGotAllRequired()
+  File "otp\level\DistributedLevel.py", line 73, in privGotAllRequired
+    self.levelAnnounceGenerate()
+  File "toontown\coghq\DistributedFactory.py", line 81, in levelAnnounceGenerate
+    DistributedLevel.DistributedLevel.initializeLevel(self, factorySpec)
+  File "otp\level\DistributedLevel.py", line 83, in initializeLevel
+    self.privGotSpec(levelSpec)
+  File "toontown\coghq\DistributedFactory.py", line 97, in privGotSpec
+    DistributedLevel.DistributedLevel.privGotSpec(self, levelSpec)
+  File "otp\level\DistributedLevel.py", line 115, in privGotSpec
+    Level.Level.initializeLevel(self, self.doId, levelSpec, self.scenarioIndex)
+  File "otp\level\Level.py", line 32, in initializeLevel
+    self.createAllEntities(priorityTypes=['levelMgr', 'zone', 'propSpinner'])
+  File "otp\level\Level.py", line 71, in createAllEntities
+    self.createAllEntitiesOfType(type)
+  File "otp\level\Level.py", line 98, in createAllEntitiesOfType
+    self.createEntity(entId)
+  File "otp\level\Level.py", line 116, in createEntity
+    self.onEntityCreate(entId)
+  File "otp\level\Level.py", line 189, in onEntityCreate
+    messenger.send(self.getEntityOfTypeCreateEvent(self.getEntityType(entId)), [entId])
+  File "C:\Panda3D-1.9.0\direct\showbase\Messenger.py", line 397, in send
+    self.__dispatch(acceptorDict, event, sentArgs, foundWatch)
+  File "C:\Panda3D-1.9.0\direct\showbase\Messenger.py", line 482, in __dispatch
+    method (*(extraArgs + sentArgs))
+  File "otp\level\LevelMgr.py", line 28, in handleZoneCreated
+    self.privAssignZoneIds()
+  File "otp\level\LevelMgr.py", line 43, in privAssignZoneIds
+    zoneId = self.level.zoneIds[i]
+AttributeError: DistributedFactory instance has no attribute 'zoneIds'
+Traceback (most recent call last):
+  File "otp\otpbase\OTPBase.py", line 239, in run
+    taskMgr.run()
+  File "C:\Panda3D-1.9.0\direct\task\Task.py", line 502, in run
+    self.step()
+  File "C:\Panda3D-1.9.0\direct\task\Task.py", line 460, in step
+    self.mgr.poll()
+  File "C:\Panda3D-1.9.0\direct\distributed\ConnectionRepository.py", line 613, in readerPollUntilEmpty
+    while self.readerPollOnce():
+  File "C:\Panda3D-1.9.0\direct\distributed\ConnectionRepository.py", line 620, in readerPollOnce
+    self.handleDatagram(self.private__di)
+  File "otp\distributed\OTPClientRepository.py", line 1873, in handleDatagram
+    self.handler(msgType, di)
+  File "otp\distributed\OTPClientRepository.py", line 1482, in handlePlayGame
+    self.handleGenerateWithRequiredOther(di)
+  File "otp\distributed\OTPClientRepository.py", line 1991, in handleGenerateWithRequiredOther
+    self.doGenerate(parentId, zoneId, classId, doId, di)
+  File "C:\Panda3D-1.9.0\direct\distributed\ClientRepositoryBase.py", line 162, in doGenerate
+    distObj = self.generateWithRequiredOtherFields(dclass, doId, di, parentId, zoneId)
+  File "C:\Panda3D-1.9.0\direct\distributed\ClientRepositoryBase.py", line 313, in generateWithRequiredOtherFields
+    distObj.updateRequiredOtherFields(dclass, di)
+  File "C:\Panda3D-1.9.0\direct\distributed\DistributedObject.py", line 354, in updateRequiredOtherFields
+    dclass.receiveUpdateOther(self, di)
+  File "otp\level\DistributedLevel.py", line 70, in setStartTimestamp
+    self.privGotAllRequired()
+  File "otp\level\DistributedLevel.py", line 73, in privGotAllRequired
+    self.levelAnnounceGenerate()
+  File "toontown\coghq\DistributedFactory.py", line 81, in levelAnnounceGenerate
+    DistributedLevel.DistributedLevel.initializeLevel(self, factorySpec)
+  File "otp\level\DistributedLevel.py", line 83, in initializeLevel
+    self.privGotSpec(levelSpec)
+  File "toontown\coghq\DistributedFactory.py", line 97, in privGotSpec
+    DistributedLevel.DistributedLevel.privGotSpec(self, levelSpec)
+  File "otp\level\DistributedLevel.py", line 115, in privGotSpec
+    Level.Level.initializeLevel(self, self.doId, levelSpec, self.scenarioIndex)
+  File "otp\level\Level.py", line 32, in initializeLevel
+    self.createAllEntities(priorityTypes=['levelMgr', 'zone', 'propSpinner'])
+  File "otp\level\Level.py", line 71, in createAllEntities
+    self.createAllEntitiesOfType(type)
+  File "otp\level\Level.py", line 98, in createAllEntitiesOfType
+    self.createEntity(entId)
+  File "otp\level\Level.py", line 116, in createEntity
+    self.onEntityCreate(entId)
+  File "otp\level\Level.py", line 189, in onEntityCreate
+    messenger.send(self.getEntityOfTypeCreateEvent(self.getEntityType(entId)), [entId])
+  File "C:\Panda3D-1.9.0\direct\showbase\Messenger.py", line 397, in send
+    self.__dispatch(acceptorDict, event, sentArgs, foundWatch)
+  File "C:\Panda3D-1.9.0\direct\showbase\Messenger.py", line 482, in __dispatch
+    method (*(extraArgs + sentArgs))
+  File "otp\level\LevelMgr.py", line 28, in handleZoneCreated
+    self.privAssignZoneIds()
+  File "otp\level\LevelMgr.py", line 43, in privAssignZoneIds
+    zoneId = self.level.zoneIds[i]
+AttributeError: DistributedFactory instance has no attribute 'zoneIds'

@@ -1,0 +1,60 @@
+ToontownStart: Polling for game2 to finish...
+ToontownStart: Game2 is finished.
+ToontownStart: Starting the game.
+ToontownStart: setting default font
+TTLocalizer: Running in language: english
+from toontown.toonbase.TTLocalizerEnglish import *
+OTPLocalizer: Running in language: english
+from otp.otpbase.OTPLocalizerEnglish import *
+ToontownStart: Loading default gui sounds
+ToontownStart: serverVersion:  tti-retro-dev
+Preloading avatars...
+Done preloading avatars.
+{401000001: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x1C224F08>}
+entering active SC menu
+local
+1
+Reading DNA file... phase_4/dna/storage.dna
+Reading DNA file... phase_3.5/dna/storage_interior.dna
+entering active SC menu
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+Reading DNA file... phase_4/dna/storage_TT.dna
+Reading DNA file... phase_4/dna/storage_TT_sz.dna
+Reading DNA file... phase_4/dna/toontown_central_sz.dna
+fisherman origin:  render/loader_data/toontownCentral/fishing_pond_1/npc_fisherman_origin_0
+Responding to non-available character!
+updating achievements page
+updating achievements page
+Reading DNA file... phase_5/dna/storage_town.dna
+Reading DNA file... phase_5/dna/storage_TT_town.dna
+Reading DNA file... phase_5/dna/toontown_central_2200.dna
+DNALandmarkBuilding sb42:toon_landmark_hqTT_DNARoot did not find **/*suit_building_origin
+updating achievements page
+0.0 6.1500005722 -1.20000004768 0.800000011921
+LPoint3f(-3.667, 0.05, -2.9)
+0.0 6.1500005722 -1.20000004768 0.800000011921
+LPoint3f(-3.667, 0.05, -2.9)
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+Battle Event localtoon-battle-event-9
+fisherman origin:  render/town_top_level/toontownCentral/@@2236/fishing_pond_1/npc_fisherman_origin_0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+Reading DNA file... phase_4/dna/storage_TT_sz.dna
+Reading DNA file... phase_4/dna/toontown_central_sz.dna
+fisherman origin:  render/loader_data/toontownCentral/fishing_pond_1/npc_fisherman_origin_0
+Responding to non-available character!
+updating achievements page
+updating achievements page
+frame rate: 31.2 fps|0.092d|5 avs||343|352||0x8086|0x0106|975.3MB|968.5MB|3912.4MB|1018|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL

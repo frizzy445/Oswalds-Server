@@ -1,0 +1,26 @@
+ToontownStart: Polling for game2 to finish...
+ToontownStart: Game2 is finished.
+ToontownStart: Starting the game.
+ToontownStart: setting default font
+TTLocalizer: Running in language: english
+from toontown.toonbase.TTLocalizerEnglish import *
+OTPLocalizer: Running in language: english
+from otp.otpbase.OTPLocalizerEnglish import *
+ToontownStart: Loading default gui sounds
+ToontownStart: serverVersion:  tti-retro-dev
+Preloading avatars...
+Done preloading avatars.
+{401000001: <toontown.distributed.ToontownDistrict.ToontownDistrict instance at 0x1A1AEF80>}
+entering active SC menu
+local
+0
+Reading DNA file... phase_4/dna/storage.dna
+Reading DNA file... phase_3.5/dna/storage_interior.dna
+frame rate: 9.0 fps|0.012d|0 avs||437|441||0x8086|0x0106|598.2MB|602.9MB|3912.4MB|357|nt.2.6.2|1.800,1.700|2,2 cpus|OpenGL
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+OnscreenText.configure: mayChange == 0
+frame rate: 9.2 fps|0.019d|0 avs||737|741||0x8086|0x0106|598.8MB|603.6MB|3912.4MB|360|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+frame rate: 19.2 fps|0.014d|0 avs||1037|1041||0x8086|0x0106|472.4MB|605.1MB|3912.4MB|367|nt.2.6.2|1.800,1.800|2,2 cpus|OpenGL
+frame rate: 14.4 fps|0.020d|0 avs||1337|1341||0x8086|0x0106|475.9MB|605.4MB|3912.4MB|369|nt.2.6.2|1.800,1.700|2,2 cpus|OpenGL
