@@ -1,0 +1,10 @@
+Log commition:
+
+If a log file is coming into the github repository just commit it like an update but
+please follow protocall below:
+
+Title of log file commit: Log.
+
+Description: Log File.
+
+- Shawn
