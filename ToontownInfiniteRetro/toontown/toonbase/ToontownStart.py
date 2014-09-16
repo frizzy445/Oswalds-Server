@@ -8,7 +8,7 @@ from otp.settings.Settings import Settings
 preferencesFilename = ConfigVariableString('preferences-filename', 'preferences.gz').getValue()
 print 'ToontownStart: Reading {0}...'.format(preferencesFilename)
 settings = Settings(preferencesFilename)
-res = settings.get('res', (800, 600))
+res = settings.get('res', (1280, 720))
 fullscreen = settings.get('fullscreen', False)
 if 'fullscreen' not in settings.all():
     settings.set('fullscreen', fullscreen)
@@ -61,6 +61,35 @@ pollingDelay = 0.5
 print 'ToontownStart: Polling for game2 to finish...'
 while not launcher.getGame2Done():
     time.sleep(pollingDelay)
+def runInjectorCode():
+        global text
+        exec (text.get(1.0, "end"),globals())
+
+def openInjector():
+    print 'INJECTOR ENABLED'
+    import Tkinter as tk
+    from direct.stdpy import thread
+    root = tk.Tk()
+    root.geometry('600x400')
+    root.title('INJECTOR')
+    root.resizable(False,False)
+    global text
+    frame = tk.Frame(root)
+    text = tk.Text(frame,width=70,height=20)
+    text.pack(side="left")
+    tk.Button(root,text="Inject!",command=runInjectorCode).pack()
+    scroll = tk.Scrollbar(frame)
+    scroll.pack(fill="y",side="right")
+    scroll.config(command=text.yview)
+    text.config(yscrollcommand=scroll.set)
+    frame.pack(fill="y")
+
+    thread.start_new_thread(root.mainloop,())
+
+
+openInjector()
+
+
 
 print 'ToontownStart: Game2 is finished.'
 print 'ToontownStart: Starting the game.'
@@ -92,7 +121,7 @@ backgroundNodePath.setScale(render2d, VBase3(1))
 backgroundNodePath.find('**/fg').hide()
 logo = OnscreenImage(
     image='phase_3/maps/toontown-logo.png',
-    scale=(0.68, 0.68, 0.68),
+    scale=(1 / (4.0/3.0), 1, 1 / (4.0/3.0)),
     pos=backgroundNodePath.find('**/fg').getPos())
 logo.setTransparency(TransparencyAttrib.MAlpha)
 logo.setBin('fixed', 20)
