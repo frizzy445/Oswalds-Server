@@ -427,6 +427,7 @@ class DistributedToon(DistributedPlayer.DistributedPlayer, Toon.Toon, Distribute
         self.defaultShard = shard
 
     def setDefaultZone(self, zoneId):
+        ToontownCentral = 2000
         if zoneId >= 20000 and zoneId < 22000:
             zoneId = zoneId + 2000
         try:
