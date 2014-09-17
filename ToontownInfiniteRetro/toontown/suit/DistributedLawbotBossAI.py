@@ -1,3 +1,4 @@
+from otp.ai.MagicWordGlobal import *
 from otp.ai.AIBaseGlobal import *
 from direct.distributed.ClockDelta import *
 import DistributedBossCogAI
@@ -893,3 +894,23 @@ class DistributedLawbotBossAI(DistributedBossCogAI.DistributedBossCogAI, FSM.FSM
         if battleDifficulty >= numDifficultyLevels:
             battleDifficulty = numDifficultyLevels - 1
         self.b_setBattleDifficulty(battleDifficulty)
+
+@magicWord(category=CATEGORY_ADMINISTRATOR)
+def skipcJ():
+    """
+    Skips to the final round of the CJ.
+    """
+    invoker = spellbook.getInvoker()
+    boss = None
+    for do in simbase.air.doId2do.values():
+        if isinstance(do, DistributedLawbotBossAI):
+            if invoker.doId in do.involvedToons:
+                boss = do
+                break
+    if not boss:
+        return "You aren't in a CJ!"
+    if boss.state in ('PrepareBattleThree', 'BattleThree'):
+        return "You can't skip this round."
+    boss.exitIntroduction()
+    boss.b_setState('PrepareBattleThree')
+    return 'Skipping the first round...'

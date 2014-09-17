@@ -1,5 +1,6 @@
 import random
 import math
+from otp.ai.MagicWordGlobal import *
 from pandac.PandaModules import Point3
 from direct.directnotify import DirectNotifyGlobal
 from direct.fsm import FSM
@@ -919,3 +920,56 @@ class DistributedBossbotBossAI(DistributedBossCogAI.DistributedBossCogAI, FSM.FS
     def toggleMove(self):
         self.moveAttackAllowed = not self.moveAttackAllowed
         return self.moveAttackAllowed
+
+@magicWord(category=CATEGORY_ADMINISTRATOR, types=[str])
+def skipCEO(battle='next'):
+    """
+    Skips to the indicated round of the CEO.
+    """
+    invoker = spellbook.getInvoker()
+    boss = None
+    for do in simbase.air.doId2do.values():
+        if isinstance(do, DistributedBossbotBossAI):
+            if invoker.doId in do.involvedToons:
+                boss = do
+                break
+    if not boss:
+        return "You aren't in a CEO!"
+
+    battle = battle.lower()
+
+    if battle == 'two':
+        if boss.state in ('PrepareBattleFour', 'BattleFour', 'PrepareBattleThree', 'BattleThree', 'PrepareBattleTwo', 'BattleTwo'):
+            return "You can not return to previous rounds!"
+        else:
+            boss.b_setState('PrepareBattleTwo')
+            return "Skipping to second round..."
+
+    if battle == 'three':
+        if boss.state in ('PrepareBattleFour', 'BattleFour', 'PrepareBattleThree', 'BattleThree'):
+            return "You can not return to previous rounds!"
+        else:
+            boss.b_setState('PrepareBattleThree')
+            return "Skipping to third round..."
+
+    if battle == 'four':
+        if boss.state in ('PrepareBattleFour', 'BattleFour'):
+            return "You can not return to previous rounds!"
+        else:
+            boss.b_setState('PrepareBattleFour')
+            return "Skipping to last round..."
+
+    if battle == 'next':
+        if boss.state in ('PrepareBattleOne', 'BattleOne'):
+            boss.b_setState('PrepareBattleTwo')
+            return "Skipping current round..."
+        elif boss.state in ('PrepareBattleTwo', 'BattleTwo'):
+            boss.b_setState('PrepareBattleThree')
+            return "Skipping current round..."
+        elif boss.state in ('PrepareBattleThree', 'BattleThree'):
+            boss.b_setState('PrepareBattleFour')
+            return "Skipping current round..."
+        elif boss.state in ('PrepareBattleFour', 'BattleFour'):
+            return "Can not skip current round."
+
+    boss.exitIntroduction()
